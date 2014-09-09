@@ -368,14 +368,13 @@ public class BaseUtils
 			font = Font.createFont(Font.TRUETYPE_FONT, BaseUtils.class.getResourceAsStream("/net/launcher/theme/" + name + ".ttf"));
 			} catch(Exception e)
 			{
-				e.printStackTrace();
-			}
-			try
-			{
-			font = Font.createFont(Font.TRUETYPE_FONT, BaseUtils.class.getResourceAsStream("/net/launcher/theme/" + name + ".otf"));
-			} catch(Exception e)
-			{
-				e.printStackTrace();
+				try
+				{
+				font = Font.createFont(Font.TRUETYPE_FONT, BaseUtils.class.getResourceAsStream("/net/launcher/theme/" + name + ".otf"));
+				} catch(Exception e1)
+				{
+					e1.printStackTrace();
+				}
 			}
 			fonts.put(name, font);
 			return font.deriveFont(size);
