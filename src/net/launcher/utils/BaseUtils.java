@@ -361,9 +361,22 @@ public class BaseUtils
 		try
 		{
 			if(fonts.containsKey(name)) return (Font)fonts.get(name).deriveFont(size);
-
+			Font font = null;
 			send("Creating font: " + name);
-			Font font = Font.createFont(Font.TRUETYPE_FONT, BaseUtils.class.getResourceAsStream("/net/launcher/theme/" + name + ".ttf"));
+			try
+			{
+			font = Font.createFont(Font.TRUETYPE_FONT, BaseUtils.class.getResourceAsStream("/net/launcher/theme/" + name + ".ttf"));
+			} catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+			try
+			{
+			font = Font.createFont(Font.TRUETYPE_FONT, BaseUtils.class.getResourceAsStream("/net/launcher/theme/" + name + ".otf"));
+			} catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			fonts.put(name, font);
 			return font.deriveFont(size);
 		} catch(Exception e)
