@@ -365,12 +365,12 @@ public class BaseUtils
 			send("Creating font: " + name);
 			try
 			{
-			font = Font.createFont(Font.TRUETYPE_FONT, BaseUtils.class.getResourceAsStream("/net/launcher/theme/" + name + ".ttf"));
+				font = Font.createFont(Font.TRUETYPE_FONT, BaseUtils.class.getResourceAsStream("/net/launcher/theme/" + name + ".ttf"));
 			} catch(Exception e)
 			{
 				try
 				{
-				font = Font.createFont(Font.TRUETYPE_FONT, BaseUtils.class.getResourceAsStream("/net/launcher/theme/" + name + ".otf"));
+					font = Font.createFont(Font.TRUETYPE_FONT, BaseUtils.class.getResourceAsStream("/net/launcher/theme/" + name + ".otf"));
 				} catch(Exception e1)
 				{
 					e1.printStackTrace();

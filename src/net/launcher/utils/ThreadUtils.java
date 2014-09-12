@@ -190,12 +190,11 @@ public class ThreadUtils
 				}
 
 				setProperty("password", encrypt(answer.split("<br>")[2].split("<br>")[0], d).replaceAll("\n|\r\n", ""));
-				//runUpdater(answer);
 				if(Frame.token.equals("null"))
 				{
 					Frame.password.setVisible(false);
 					Frame.toGame.setVisible(true);
-					Frame.toPersonal.setVisible(true);
+					Frame.toPersonal.setVisible(Settings.usePersonal && true);
 					Frame.toAuth.setVisible(false);
 					Frame.toLogout.setVisible(true);
 					Frame.toRegister.setVisible(false);

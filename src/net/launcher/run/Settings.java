@@ -37,14 +37,14 @@ public class Settings
 
 	/** Настройки структуры лаунчера */
 	public static boolean useAutoenter	         =  false;  //Использовать функцию автозахода на выбранный сервер
-	public static boolean useRegister		     =  true;  //Использовать Регистрацию в лаунчере
+	public static boolean useRegister		     =  true;   //Использовать Регистрацию в лаунчере
 	public static boolean useMulticlient		 =  true;   //Использовать функцию "по клиенту на сервер"
 	public static boolean useStandartWB		     =  true;   //Использовать стандартный браузер для открытия ссылок
 	public static boolean usePersonal		     =  true;   //Использовать Личный кабинет
 	public static boolean customframe 		     =  true;   //Использовать кастомный фрейм
 	public static boolean useConsoleHider		 =  false;  //Использовать скрытие консоли клиента
 	public static boolean useModCheckerTimer	 =  true;   //Перепроверка jar через 30 секунд
-	public static int     useModCheckerint       =  2;      //Количество раз пеепроверки jar во времяигры
+	public static int     useModCheckerint       =  2;      //Количество раз перепроверки jar во время игры
 	public static boolean assetsfolder           =  false;  //Скачивать assets из папки, или из архива (true=из папки false=из архива) в connect.php должно быть так же.
 
 	public static final String protectionKey	 = "1234567890"; //Ключ защиты сессии. Никому его не говорите.
